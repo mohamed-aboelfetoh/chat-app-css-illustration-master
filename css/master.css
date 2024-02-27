@@ -1,0 +1,348 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: "Rubik", sans-serif;
+}
+
+.container{
+    width: 100%;
+    background-color: hsl(270, 20%, 96%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.container::before{
+    content: "";
+    width: 100%;
+    height: 55%;
+    background-color: hsl(264, 100%, 61%);
+    position: absolute;
+    top: 0px;
+    left: -50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+
+.container::after{
+    content: "";
+    width: 100%;
+    height: 55%;
+    background-color: hsl(0, 0%, 94%);
+    position: absolute;
+    bottom: -80px;
+    right: -50%;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    z-index:1 ;
+}
+
+
+@media (min-width:992px){
+    .container {
+        height: 100vh;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    
+    
+    .container::before{
+        content: "";
+        width: 40%;
+        height: 95%;
+        background-color: hsl(264, 100%, 61%);
+        position: absolute;
+        top: 0px;
+        left: -13%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+    
+    
+    .container::after{
+        content: "";
+        width: 40%;
+        height: 90%;
+        background-color: hsl(0, 0%, 94%);
+        position: absolute;
+        bottom: 0px;
+        right: -15%;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        z-index:1;
+    }
+}
+
+
+
+
+.phone{
+    width: 285px;
+    background-color: white;
+    position: relative;
+    top: 75px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 100px;
+    box-shadow: 0px 10px 15px 0px #e9e3ed;
+    z-index: 4;
+}
+
+@media (min-width:992px){
+    .phone {
+        top: 0px; 
+        margin-bottom: 0px; 
+        margin-right: 50px;
+    }
+}
+
+.phonecontainer{
+    background-color: hsl(270, 20%, 96%);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* start user data  */
+.phonecontainer .user{
+    background-image: linear-gradient(to right , hsl(264, 100%, 61%) , hsl(293, 100%, 63%));
+    border-radius: 15px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px 30px 10px;
+    height: 90px;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-end;
+    position: relative;
+    box-shadow: 0px 0px 5px 5px hsl(270, 20%, 96%);
+}
+
+.phonecontainer .user::before{
+    content: "";
+    width: 60%;
+    height: 50px;
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+i{
+    font-weight: 400;
+    color: hsl(0, 0%, 100%,0.7);
+    position: absolute;
+    top: 50%;
+    left: 90%;
+}
+
+.phonecontainer .user .image{
+    position: relative;
+}
+
+.phonecontainer .user .image::before{
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-width: 2px;
+    border-color:transparent transparent hsl(0, 0%, 100%) hsl(0, 0%, 100%) ;
+    border-style: solid;
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform:translate(-100%,-100%) rotate(45deg);
+}
+
+.phonecontainer .user img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px white solid;
+    margin-right: 10px;
+}
+
+.phonecontainer .user .userdata h5{
+    color: hsl(0, 0%, 100%);   
+    font-weight: 500;
+}
+
+.phonecontainer .user .userdata p{
+    color: hsl(276, 100%, 81%);
+    font-weight: 400;
+    font-size: 10px;
+}
+/* end user data  */
+
+/* start chat data */
+.phonecontainer  .content{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.phonecontainer  .content p:first-of-type,
+.phonecontainer  .content p:nth-of-type(2){
+    padding: 10px;
+    font-size: 10px;
+    color: hsl(276, 55%, 52%);
+    background-color: #e9e3ed;
+    width: 65%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.phonecontainer  .content .image {
+display: flex;
+flex-direction: row;
+margin:10px 0px;
+justify-content: flex-end;
+}
+
+.phonecontainer  .content .image img{
+width: 50px;
+border-radius: 10px;
+margin-left: 10px;
+}
+
+.phonecontainer  .content p:nth-of-type(3),
+.phonecontainer  .content p:nth-of-type(4){
+    padding: 10px;
+    font-size: 10px;
+    color: hsl(271, 15%, 43%);
+    background-color: hsl(0, 0%, 100%);
+    width: 65%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    align-self: flex-end;
+}
+.phonecontainer  .content p:nth-of-type(4){
+    width: fit-content;
+}
+
+.phonecontainer  .content p:nth-of-type(5){
+    padding: 10px;
+    font-size: 10px;
+    color: hsl(276, 55%, 52%);
+    background-color: #e9e3ed;
+    width: 65%;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+
+form>div:not(.textarea){
+    background-image: linear-gradient(to right  , hsl(293, 100%, 63%) , hsl(264, 100%, 61%));
+    margin-bottom: 10px;
+    width: 75%;
+    padding: 10px;
+    border-radius: 10px;
+    border-bottom-left-radius: 5px;
+    font-size: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+form>div label{
+    margin-left: 5px;
+    color:hsl(276, 100%, 81%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form>div label span{
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+form [type="radio"]{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid hsl(276, 100%, 81%);
+    border-radius: 50%;
+}
+
+.textarea{
+    background-color: white;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 18px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-top: 20px;
+}
+
+[type="text"]{
+    width: 88%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+[type="text"]::placeholder{
+    color: hsl(276, 100%, 81%);
+}
+
+[type="submit"]{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background-color: hsl(271, 36%, 24%);
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+/* end chat data */
+
+
+/* start descripton of app  */
+.description{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin-bottom: 50px;
+    z-index: 3;
+}
+
+.description h1{
+    color: hsl(271, 36%, 24%);
+    font-size: 40px;
+    font-weight: 500;
+}
+.description p{
+    color: hsl(270, 7%, 64%);
+    line-height: 1.6;
+}
+
+@media (min-width:992px){
+
+    .description {
+        width: 35%;
+    text-align:start
+    }
+}
+/* end descripton of app  */
+
+
+
+
